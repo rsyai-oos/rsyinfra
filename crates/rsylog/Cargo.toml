@@ -9,7 +9,7 @@ repository.workspace = true
 rust-version.workspace = true
 version.workspace = true
 readme = "README.md"
-categories = ["logging", "log"]
+categories = ["logging"]
 keywords = ["logging", "log"]
 include = ["../LICENSE-APACHE", "../LICENSE-MIT", "**/*.rs", "Cargo.toml"]
 

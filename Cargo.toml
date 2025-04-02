@@ -1,11 +1,13 @@
 [workspace]
-members = ["crates/rsyalgo", "crates/rsyinfra", "crates/rsylog"]
+members = ["crates/rsyalgo", "crates/rsyasync", "crates/rsycache", "crates/rsyconc",
+"crates/rsyconf", "crates/rsyerr", "crates/rsygpu", "crates/rsyinfra", "crates/rsylog",
+"crates/rsymacro", "crates/rsymem", "crates/rsyserde", "crates/rsysync"]
 resolver = "2"
 
 [workspace.metadata.docs.rs]
-all-features = true
-rustdoc-args = ["--generate-link-to-definition"]
-targets = ["x86_64-unknown-linux-gnu", "wasm32-unknown-unknown"]
+# all-features = true
+# rustdoc-args = ["--generate-link-to-definition"]
+# targets = ["x86_64-unknown-linux-gnu", "wasm32-unknown-unknown"]
 
 [workspace.package]
 authors = ["Rsyai Technologies<tsinjue@gmail.com>"]
@@ -46,9 +48,19 @@ opt-level = 2
 rsylog = {version = "0.1.0", path = "crates/rsylog"}
 rsyalgo = {version = "0.1.0", path = "crates/rsyalgo"}
 rsyinfra = {version = "0.1.0", path = "crates/rsyinfra"}
+rsyasync = {version = "0.1.0", path = "crates/rsyasync"}
+rsysync = {version = "0.1.0", path = "crates/rsysync"}
+rsyconc = {version = "0.1.0", path = "crates/rsyconc"}
+rsyerr = {version = "0.1.0", path = "crates/rsyerr"}
+rsycache = {version = "0.1.0", path = "crates/rsycache"}
+rsymem = {version = "0.1.0", path = "crates/rsymem"}
+rsyserde = {version = "0.1.0", path = "crates/rsyserde"}
+rsyconf = {version = "0.1.0", path = "crates/rsyconf"}
+rsymacro = {version = "0.1.0", path = "crates/rsymacro"}
+rsygpu = {version = "0.1.0", path = "crates/rsygpu"}
 
 [workspace.lints.rust]
-unsafe_code = "deny"
+unsafe_code = "warn"
 
 elided_lifetimes_in_paths = "warn"
 future_incompatible = {level = "warn", priority = -1}

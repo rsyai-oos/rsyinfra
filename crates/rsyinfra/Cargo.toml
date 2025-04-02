@@ -22,9 +22,9 @@ crate-type = ["rlib", "cdylib"]
 rsylog = { workspace = true }
 
 [package.metadata.docs.rs]
-all-features.workspace = true
-rustdoc-args.workspace = true
-targets.workspace = true
+# all-features.workspace = true
+# rustdoc-args.workspace = true
+# targets.workspace = true
 
 
 [lints]

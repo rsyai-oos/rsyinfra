@@ -1,0 +1,18 @@
+[package]
+name = "rsyconc"
+authors.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+readme.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
+
+[dependencies]
+crossbeam = "^0.8"
+flume = "^0.11"
+rayon = "^1"
+
+[lints]
+workspace = true

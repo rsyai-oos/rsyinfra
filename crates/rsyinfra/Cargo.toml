@@ -10,7 +10,7 @@ repository.workspace = true
 rust-version.workspace = true
 version.workspace = true
 categories = []
-keywords = ["infrastructure", "log", "mem", "data structure", "network"]
+keywords = ["infrastructure", "log", "mem", "network"]
 include = ["../LICENSE-APACHE", "../LICENSE-MIT", "**/*.rs", "Cargo.toml"]
 
 [lib]

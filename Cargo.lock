@@ -7,5 +7,12 @@ name = "rsyalgo"
 version = "0.1.0"
 
 [[package]]
+name = "rsyinfra"
+version = "0.1.0"
+dependencies = [
+ "rsylog",
+]
+
+[[package]]
 name = "rsylog"
 version = "0.1.0"

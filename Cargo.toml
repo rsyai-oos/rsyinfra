@@ -1,5 +1,5 @@
 [workspace]
-members = ["crates/rsyalgo", "crates/rsylog"]
+members = ["crates/rsyalgo", "crates/rsyinfra", "crates/rsylog"]
 resolver = "2"
 
 [workspace.metadata.docs.rs]
@@ -10,7 +10,7 @@ targets = ["x86_64-unknown-linux-gnu", "wasm32-unknown-unknown"]
 [workspace.package]
 authors = ["Rsyai Technologies<tsinjue@gmail.com>"]
 edition = "2024"
-homepage = "www.rsyai.com"
+homepage = "https://www.rsyai.com"
 license = "MIT OR Apache-2.0"
 readme = "README.md"
 repository = "https://github.com/rsyai-oos/rsyinfra.git"
@@ -43,8 +43,9 @@ panic = "abort" # This leads to better optimizations and smaller binaries (and i
 opt-level = 2
 
 [workspace.dependencies]
-rsylog = {version = "0.1.0", path = "../crates/rsylog"}
-rsyalgo = {version = "0.1.0", path = "../crates/rsyalgo"}
+rsylog = {version = "0.1.0", path = "crates/rsylog"}
+rsyalgo = {version = "0.1.0", path = "crates/rsyalgo"}
+rsyinfra = {version = "0.1.0", path = "crates/rsyinfra"}
 
 [workspace.lints.rust]
 unsafe_code = "deny"

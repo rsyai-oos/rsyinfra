@@ -1,0 +1,30 @@
+[package]
+name = "rsycache"
+authors.workspace = true
+description = "a local cache manager for rust"
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
+readme = "README.md"
+categories = ["development-tools::debugging"]
+keywords = ["logging", "log"]
+include = ["../LICENSE-APACHE", "../LICENSE-MIT", "**/*.rs", "Cargo.toml"]
+
+[lib]
+crate-type = ["rlib", "cdylib"]
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["x86_64-unknown-linux-gnu", "wasm32-unknown-unknown"]
+targets.workspace = ["--generate-link-to-definition"]
+
+[features]
+
+
+[dependencies]
+
+[lints]
+workspace = true

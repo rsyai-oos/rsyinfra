@@ -7,21 +7,5 @@ name = "rsyalgo"
 version = "0.1.0"
 
 [[package]]
-name = "rsycache"
-version = "0.1.0"
-
-[[package]]
-name = "rsyfs"
-version = "0.1.0"
-
-[[package]]
-name = "rsymacro"
-version = "0.1.0"
-
-[[package]]
-name = "rsymem"
-version = "0.1.0"
-
-[[package]]
-name = "rsysync"
+name = "rsylog"
 version = "0.1.0"

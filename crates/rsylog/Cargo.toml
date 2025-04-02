@@ -1,17 +1,18 @@
 [package]
-name = "rsyalgo"
-version.workspace = true
+name = "rsylog"
 authors.workspace = true
-description = "A wrapper for all algorithms implemeted with rust"
+description = "A wrapper for rust logging crates"
 edition.workspace = true
 homepage.workspace = true
-rust-version.workspace = true
 license.workspace = true
 repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
 readme = "README.md"
-categories = ["algorithms"]
-keywords = ["algorithms"]
+categories = ["logging", "log"]
+keywords = ["logging", "log"]
 include = ["../LICENSE-APACHE", "../LICENSE-MIT", "**/*.rs", "Cargo.toml"]
+
 
 [package.metadata.docs.rs]
 all-features.workspace = true

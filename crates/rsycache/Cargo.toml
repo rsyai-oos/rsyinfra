@@ -17,9 +17,9 @@ include = ["../LICENSE-APACHE", "../LICENSE-MIT", "**/*.rs", "Cargo.toml"]
 crate-type = ["rlib", "cdylib"]
 
 [package.metadata.docs.rs]
-all-features = true
-rustdoc-args = ["x86_64-unknown-linux-gnu", "wasm32-unknown-unknown"]
-targets.workspace = ["--generate-link-to-definition"]
+# all-features = true
+# rustdoc-args = ["x86_64-unknown-linux-gnu", "wasm32-unknown-unknown"]
+# targets.workspace = ["--generate-link-to-definition"]
 
 [features]
 

@@ -1,0 +1,31 @@
+[package]
+name = "rsyinfra"
+authors.workspace = true
+description = "rust infrastructure crates"
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+readme.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
+categories = []
+keywords = ["infrastructure", "log", "mem", "data structure", "network"]
+include = ["../LICENSE-APACHE", "../LICENSE-MIT", "**/*.rs", "Cargo.toml"]
+
+[lib]
+crate-type = ["rlib", "cdylib"]
+
+[features]
+
+[dependencies]
+
+
+[package.metadata.docs.rs]
+all-features.workspace = true
+rustdoc-args.workspace = true
+targets.workspace = true
+
+
+[lints]
+workspace = true

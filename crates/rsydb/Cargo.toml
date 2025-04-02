@@ -1,5 +1,5 @@
 [package]
-name = "rsysync"
+name = "rsydb"
 authors.workspace = true
 edition.workspace = true
 homepage.workspace = true
@@ -10,8 +10,10 @@ rust-version.workspace = true
 version.workspace = true
 
 [dependencies]
-parking_lot = "^0.12"
-spin = "^0.10"
+# [`sled`](https://github.com/spacejam/sled) is a high-performance embedded database with an API
+# that is similar to a BTreeMap<[u8], [u8]>, but with several additional capabilities for assisting
+# creators of stateful systems.
+sled = "^0.34"
 
 [lints]
 workspace = true

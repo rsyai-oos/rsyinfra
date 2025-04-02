@@ -1,7 +1,7 @@
 [workspace]
-members = ["crates/rsyalgo", "crates/rsyasync", "crates/rsycache", "crates/rsyconc",
-"crates/rsyconf", "crates/rsyerr", "crates/rsygpu", "crates/rsyinfra", "crates/rsylog",
-"crates/rsymacro", "crates/rsymem", "crates/rsyserde", "crates/rsysync"]
+members = ["crates/rsyalgo", "crates/rsyasync", "crates/rsyauth", "crates/rsycache", "crates/rsyconc",
+"crates/rsyconf", "crates/rsycrypto", "crates/rsydb", "crates/rsyemb", "crates/rsyffi", "crates/rsyfs", "crates/rsygpu", "crates/rsyinfra", "crates/rsylog",
+"crates/rsymacro", "crates/rsymem", "crates/rsypat", "crates/rsyprim", "crates/rsyserde", "crates/rsysync", "crates/rsywasm"]
 resolver = "2"
 
 [workspace.metadata.docs.rs]
@@ -51,13 +51,19 @@ rsyinfra = {version = "0.1.0", path = "crates/rsyinfra"}
 rsyasync = {version = "0.1.0", path = "crates/rsyasync"}
 rsysync = {version = "0.1.0", path = "crates/rsysync"}
 rsyconc = {version = "0.1.0", path = "crates/rsyconc"}
-rsyerr = {version = "0.1.0", path = "crates/rsyerr"}
 rsycache = {version = "0.1.0", path = "crates/rsycache"}
 rsymem = {version = "0.1.0", path = "crates/rsymem"}
 rsyserde = {version = "0.1.0", path = "crates/rsyserde"}
 rsyconf = {version = "0.1.0", path = "crates/rsyconf"}
 rsymacro = {version = "0.1.0", path = "crates/rsymacro"}
 rsygpu = {version = "0.1.0", path = "crates/rsygpu"}
+rsydb = {version = "0.1.0", path = "crates/rsydb"}
+rsyfs = {version = "0.1.0", path = "crates/rsyfs"}
+rsypat = {version = "0.1.0", path = "crates/rsypat"}
+rsyffi = {version = "0.1.0", path = "crates/rsyffi"}
+
+
+
 
 [workspace.lints.rust]
 unsafe_code = "warn"

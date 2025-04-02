@@ -21,6 +21,9 @@ targets.workspace = true
 [features]
 
 [dependencies]
+ahash = "^0.8"
+dashmap = "^6"
+rand = "^0"
 
 [lints]
 workspace = true

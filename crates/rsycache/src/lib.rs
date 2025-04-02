@@ -1,6 +1,7 @@
 //! rsycache is a local cache manager that belongs to the rsyinfra ecosystem.
 //! It provides an abstraction for managing different types of caches (e.g., memory and disk).
 
+use rsysync::parking_lot::{Mutex, MutexGuard};
 use std::any::Any;
 use std::collections::HashMap;
 use std::sync::{Arc, RwLock};

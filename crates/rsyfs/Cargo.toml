@@ -1,5 +1,5 @@
 [package]
-name = "rsysync"
+name = "rsyfs"
 authors.workspace = true
 edition.workspace = true
 homepage.workspace = true
@@ -10,8 +10,8 @@ rust-version.workspace = true
 version.workspace = true
 
 [dependencies]
-parking_lot = "^0.12"
-spin = "^0.10"
+notify = "^8"
+walkdir = "^2"
 
 [lints]
 workspace = true

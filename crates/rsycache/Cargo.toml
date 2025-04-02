@@ -25,7 +25,24 @@ crate-type = ["rlib", "cdylib"]
 
 
 [dependencies]
+rsysync = { workspace = true }
+
+# [`cached`](https://github.com/jaemk/cached) provides implementations of several caching structures
+# as well as a handy macros for defining memoized functions.
+cached = "^0.55"
+
+# [`lru`](https://github.com/jeromefroe/lru-rs) is an implementation of a LRU cache. The cache
+# supports put, get, get_mut and pop operations, all of which are O(1). This crate was heavily
+# influenced by the LRU Cache implementation in an earlier version of Rust's std::collections crate.
 lru = "^0.13"
+
+# [`Moka`](https://github.com/moka-rs/moka) is a fast, concurrent cache library for Rust.
+# Moka is inspired by the [`Caffeine`](https://github.com/ben-manes/caffeine) library for Java.
+moka = "^0.12"
+
+# [`quick_cache`](https://github.com/arthurprs/quick-cache) Lightweight and high performance
+# concurrent cache optimized for low cache overhead.
+quick_cache = "^0.6"
 
 [lints]
 workspace = true

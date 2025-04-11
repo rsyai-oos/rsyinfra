@@ -1,0 +1,21 @@
+[package]
+name = "rsytui"
+authors.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+readme.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
+
+[dependencies]
+clap = "4.5.35"
+console = "0.15.11"
+crossterm = "0.29.0"
+# [`ratatui`](https://github.com/ratatui/ratatui.git) is a rust crate for cooking up terminal
+# user interfaces (TUIs)
+ratatui = "^0.29"
+
+[lints]
+workspace = true

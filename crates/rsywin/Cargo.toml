@@ -1,0 +1,26 @@
+[package]
+name = "rsywin"
+authors.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+readme.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
+
+[dependencies]
+
+# The windows and windows-sys crates let you call any Windows API past, present, and future using code
+# generated on the fly directly from the metadata describing the API and right into your Rust package
+# where you can call them as if they were just another Rust module. The Rust language projection
+# follows in the tradition established by C++/WinRT of building language projections for Windows
+# using standard languages and compilers, providing a natural and idiomatic way for Rust developers
+# to call Windows APIs.
+[target."cfg(windows)".dependencies.windows-sys]
+version = "^0.59"
+[target."cfg(windows)".dependencies.windows]
+version = "^0.61"
+
+[lints]
+workspace = true

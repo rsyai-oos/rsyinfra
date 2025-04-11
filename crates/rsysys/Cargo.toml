@@ -1,0 +1,28 @@
+[package]
+name = "rsysys"
+authors.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+readme.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
+
+[dependencies]
+# ['nix](https://github.com/nix-rust/nix) seeks to provide friendly bindings
+# to various *nix platform APIs (Linux, Darwin, ...). The goal is to not provide
+# a 100% unified interface, but to unify what can be while still providing
+# platform specific APIs.
+nix = "^0.29"
+
+# ['rustix'](https://github.com/bytecodealliance/rustix) is Safe Rust bindings
+# to POSIX/Unix/Linux/Winsock-like syscalls
+rustix = "^1.0"
+
+# ['sysinfo'](https://github.com/guillaumegomez/sysinfo) is a crate used to
+# get a system's information.
+sysinfo = "^0.34"
+
+[lints]
+workspace = true

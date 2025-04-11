@@ -10,7 +10,14 @@ rust-version.workspace = true
 version.workspace = true
 
 [dependencies]
+
+# [`config`](https://github.com/rust-cli/config-rs) Layered configuration system for Rust
+# applications (with strong support for 12-factor applications).
 config = "^0.15"
+
+# [`dotenvy`](https://github.com/allan2/dotenvy) loads environment variables from a .env file.
+# This is convenient for dev environments.
+dotenvy = "^0.15"
 
 [lints]
 workspace = true

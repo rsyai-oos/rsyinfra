@@ -1,7 +1,5 @@
 [workspace]
-members = ["crates/rsyalgo", "crates/rsyasync", "crates/rsyauth", "crates/rsycache", "crates/rsyconc",
-"crates/rsyconf", "crates/rsycrypto", "crates/rsydb", "crates/rsyemb", "crates/rsyffi", "crates/rsyfs", "crates/rsygpu", "crates/rsyinfra", "crates/rsylog",
-"crates/rsymacro", "crates/rsymem", "crates/rsypat", "crates/rsyprim", "crates/rsyserde", "crates/rsysync", "crates/rsywasm"]
+members = ["crates/*"]
 resolver = "2"
 
 [workspace.metadata.docs.rs]

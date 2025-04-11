@@ -1,0 +1,30 @@
+[package]
+name = "rsyds"
+authors.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+readme.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
+
+[dependencies]
+# [`hashbown`](https://github.com/rust-lang/hashbrown) is a Rust port of Google's high-performance
+# SwissTable hash map, adapted to make it a drop-in replacement for Rust's standard HashMap and HashSet types.
+hashbrown = "^0.15"
+
+# ['indexmap'](https://github.com/indexmap-rs/indexmap) is A pure-Rust hash table which preserves
+# (in a limited sense) insertion order.
+indexmap = "^2"
+
+# ['petgrach'](https://github.com/petgraph/petgraph) is a rust Graph data structure library.
+# Please read the API documentation here.
+petgraph = "^0.8"
+
+# ['smallvec'](https://github.com/servo/rust-smallvec) optimization for Rust: store up to a small
+# number of items on the stack
+smallvec = "^1"
+
+[lints]
+workspace = true

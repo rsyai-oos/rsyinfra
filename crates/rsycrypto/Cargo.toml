@@ -11,18 +11,27 @@ version.workspace = true
 
 [dependencies]
 # [`BLAKE3`](https://github.com/blake3-team/blake3) is a cryptographic hash function
+# [no-std] support
 blake3 = "^1"
 
+# [`pbkdf2`](https://github.com/rustcrypto/password-hashes) is Pure Rust implementation of the
+# Password-Based Key Derivation Function v2 (PBKDF2).
+# [no-std] support
+pbkdf2 = "^0.12"
+
 # [`Pem`](https://github.com/jcreekmore/pem-rs) is A Rust library for parsing and encoding PEM-encoded data.
+# [no-std] support
 pem = "^3"
 
 # [`Rustls`](https://rustls.github.io/rustls/) is used in production at many organizations and projects.
 # We aim to maintain reasonable API surface stability but the API may evolve as we make changes to
 # accommodate new features or performance improvements.
+# [no-std] support
 rustls = "^0.23"
 
 # [`Sha2`](https://github.com/rustcrypto/hashes) is Pure Rust implementation of the SHA-2 hash function
 # family including SHA-224, SHA-256, SHA-384, and SHA-512
+# [no-std] support
 sha2 = "^0.10"
 
 [lints]

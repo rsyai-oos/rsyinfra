@@ -12,6 +12,77 @@ pub trait Cache: Any {
     fn as_any_mut(&mut self) -> &mut dyn Any;
 }
 
+pub struct CacheManager {
+    caches: Arc<RwLock<HashMap<String, Arc<dyn Cache>>>>,
+}
+
+impl CacheManager {
+    pub fn new() -> Self {
+        Self {
+            caches: Arc::new(RwLock::new(HashMap::new())),
+        }
+    }
+
+    // Add a cache to the manager
+    pub fn add_cache(&self, name: String, cache: Arc<dyn Cache>) -> Result<(), String> {
+        let mut caches = self.caches.write().unwrap();
+        if caches.contains_key(&name) {
+            return Err(format!("Cache with name {} already exists", name));
+        }
+        caches.insert(name, cache);
+        Ok(())
+    }
+
+    // Remove a cache from the manager
+    pub fn remove_cache(&self, name: &str) -> Result<(), String> {
+        let mut caches = self.caches.write().unwrap();
+        if !caches.contains_key(name) {
+            return Err(format!("Cache with name {} does not exist", name));
+        }
+        caches.remove(name);
+        Ok(())
+    }
+
+    // Retrieve a cache by name
+    pub fn get_cache(&self, name: &str) -> Option<Arc<dyn Cache>> {
+        let caches = self.caches.read().unwrap();
+        caches.get(name).cloned()
+    }
+
+    // Get the number of caches managed
+    pub fn cache_count(&self) -> usize {
+        let caches = self.caches.read().unwrap();
+        caches.len()
+    }
+
+    // Clear a specific cache
+    pub fn clear_cache(&self, name: &str) -> Result<(), String> {
+        let mut caches = self.caches.write().unwrap();
+        if let Some(cache) = caches.get_mut(name) {
+            if let Some(mem_cache) = cache.as_any_mut().downcast_mut::<MemCache>() {
+                mem_cache.cache.clear();
+            } else if let Some(disk_cache) = cache.as_any_mut().downcast_mut::<DiskCache>() {
+                disk_cache.cache.clear();
+            }
+            Ok(())
+        } else {
+            Err(format!("Cache with name {} does not exist", name))
+        }
+    }
+
+    // Clear all caches
+    pub fn clear_all_caches(&self) {
+        let mut caches = self.caches.write().unwrap();
+        for cache in caches.values_mut() {
+            if let Some(mem_cache) = cache.as_any_mut().downcast_mut::<MemCache>() {
+                mem_cache.cache.clear();
+            } else if let Some(disk_cache) = cache.as_any_mut().downcast_mut::<DiskCache>() {
+                disk_cache.cache.clear();
+            }
+        }
+    }
+}
+
 // CacheBuilder is responsible for creating instances of Cache
 pub struct CacheBuilder {
     cache_type: CacheType,

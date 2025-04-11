@@ -17,6 +17,11 @@ crate-type = ["rlib", "cdylib"]
 [dependencies]
 anyhow = "^1"
 bitflags = "^2"
+
+# darling is a crate for proc macro authors, which enables parsing attributes into structs.
+# It is heavily inspired by serde both in its internals and in its API.
+darling = "^0.20"
+
 # [`Half-precision`](https://github.com/VoidStarKat/half-rs/tree/main) floating point f16 and bf16 types
 # for Rust implementing the IEEE 754-2008 standard binary16 and bfloat16 types
 half = "^2"

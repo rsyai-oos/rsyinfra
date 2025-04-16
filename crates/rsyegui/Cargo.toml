@@ -1,0 +1,42 @@
+[package]
+name = "rsyegui"
+authors.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+readme.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
+
+[dependencies]
+eframe = "^0.31"
+egui = "^0.31"
+
+# [`hello_egui`](https://github.com/lucasmerlin/hello_egui.git) crates
+# [begin hello_egui]
+egui_animation = "^0"
+egui_dnd = "^0"
+egui_flex = "^0"
+egui_form = "^0"
+egui_inbox = "^0"
+egui_infinite_scroll = "^0"
+egui_ltreeview = "^0"
+egui_material_icons = "^0"
+egui_pull_to_refresh = "^0"
+egui_router = "^0"
+egui_suspense = "^0"
+egui_taffy = "^0"
+egui_thumbhash = "^0"
+egui_virtual_list = "^0"
+hello_egui_utils = "^0"
+# [end hello_egui]
+
+egui_dock = "^0.16"
+egui_tiles = "^0.12"
+egui_plot = "^0.32"
+
+egui-data-table = "^0.6"
+
+[lints]
+workspace = true

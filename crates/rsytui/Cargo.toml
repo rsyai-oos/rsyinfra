@@ -10,12 +10,92 @@ rust-version.workspace = true
 version.workspace = true
 
 [dependencies]
-clap = "4.5.35"
-console = "0.15.11"
-crossterm = "0.29.0"
 # [`ratatui`](https://github.com/ratatui/ratatui.git) is a rust crate for cooking up terminal
 # user interfaces (TUIs)
-ratatui = "^0.29"
+[dependencies.ratatui]
+version = "^0.29"
+features = []
+
+
+# [`clap`](https://github.com/clap-rs/clap) is a simple to use, efficient, and full-featured
+# Command Line Argument Parser
+[dependencies.clap]
+version = "^4"
+# [features]
+# default = [
+#   "std",
+#   "color",
+#   "help",
+#   "usage",
+#   "error-context",
+#   "suggestions",
+# ]
+# debug = ["clap_builder/debug", "clap_derive?/debug"] # Enables debug messages
+# unstable-doc = ["clap_builder/unstable-doc", "derive"] # for docs.rs
+
+# Used in default
+# std = ["clap_builder/std"] # support for no_std in a backwards-compatible way
+# color = ["clap_builder/color"]
+# help = ["clap_builder/help"]
+# usage = ["clap_builder/usage"]
+# error-context = ["clap_builder/error-context"]
+# suggestions = ["clap_builder/suggestions"]
+
+# Optional
+# deprecated = ["clap_builder/deprecated", "clap_derive?/deprecated"] # Guided experience to prepare for next breaking release (at different stages of development, this may become default)
+# derive = ["dep:clap_derive"]
+# cargo = ["clap_builder/cargo"] # Disable if you're not using Cargo, enables Cargo-env-var-dependent macros
+# wrap_help = ["clap_builder/wrap_help"]
+# env = ["clap_builder/env"] # Use environment variables during arg parsing
+# unicode = ["clap_builder/unicode"]  # Support for unicode characters in arguments and help messages
+# string = ["clap_builder/string"]  # Allow runtime generated strings
+
+# In-work features
+# unstable-v5 = ["clap_builder/unstable-v5", "clap_derive?/unstable-v5", "deprecated"]
+# unstable-ext = ["clap_builder/unstable-ext"]
+# unstable-styles = ["clap_builder/unstable-styles"]  # deprecated
+# unstable-derive-ui-tests = []
+# unstable-markdown = ["clap_derive/unstable-markdown"]
+features = []
+
+# [`console`](https://github.com/console-rs/console) is a library for Rust that provides access to various
+# terminal features so you can build nicer looking command line interfaces. It comes with various tools
+# and utilities for working with Terminals and formatting text.
+[dependencies.console]
+version = "^0.15"
+# [features]
+# default = ["unicode-width", "ansi-parsing"]
+# windows-console-colors = ["ansi-parsing"]
+# ansi-parsing = []
+features = []
+
+# [`crossterm`](https://github.com/crossterm-rs/crossterm) Crossterm is a pure-rust, terminal manipulation
+# library that makes it possible to write cross-platform text-based interfaces (see features). It supports
+# all UNIX and Windows terminals down to Windows 7 (not all terminals are tested, see Tested Terminals for more info).
+[dependencies.crossterm]
+version = "^0.29"
+# [features]
+# default = ["bracketed-paste", "events", "windows", "derive-more"]
+#! ### Default features
+## Enables triggering [`Event::Paste`](event::Event::Paste) when pasting text into the terminal.
+# bracketed-paste = []
+## Enables reading input/events from the system using the [`event`] module.
+# events = ["dep:mio", "dep:signal-hook", "dep:signal-hook-mio"]
+## Enables windows specific crates.
+# windows = ["dep:winapi", "dep:crossterm_winapi"]
+#! ### Optional Features
+## Enables the [EventStream](event::EventStream) struct for async event reading.
+# event-stream = ["dep:futures-core", "events"]
+## Enables [`serde`] for various types.
+# serde = ["dep:serde", "bitflags/serde"]
+## Enables raw file descriptor polling / selecting instead of mio.
+# use-dev-tty = ["filedescriptor", "rustix/process"]
+## Enables `is_*` helper functions for event enums.
+# derive-more = ["dep:derive_more"]
+## Enables interacting with a host clipboard via [`clipboard`](clipboard/index.html)
+# osc52 = ["dep:base64"]
+features = []
+
 
 [lints]
 workspace = true

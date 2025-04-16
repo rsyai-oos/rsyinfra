@@ -1,0 +1,24 @@
+[package]
+name = "rsydbg"
+authors.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+readme.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
+
+[features]
+default = ["env_filter"]
+env_filter = ["tracing-subscriber/env-filter"]
+
+[dependencies]
+env_logger = "^0.11"
+log = "^0.4"
+tracing = "^0.1"
+tracing-appender = "^0.2"
+tracing-subscriber = "^0.3"
+
+[lints]
+workspace = true

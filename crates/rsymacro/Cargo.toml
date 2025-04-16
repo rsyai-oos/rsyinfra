@@ -10,6 +10,93 @@ rust-version.workspace = true
 version.workspace = true
 
 [dependencies]
+# [`document-features`](https://github.com/slint-ui/document-features) Extract documentation for the feature
+# flags from comments in Cargo.toml
+[dependencies.document-features]
+version = "^0.2"
+# [features]
+# default = []
+features = []
+
+# [`derive-new`](https://github.com/nrc/derive-new) implements simple constructor functions for structs and enums
+[dependencies.derive-new]
+version = "^0.7"
+# [features]
+# default = ["std"]
+# std = []
+features = []
+
+# [`cfg-if`](https://github.com/rust-lang/cfg-if) is a macro to ergonomically define an item depending on a large
+# number of #[cfg] parameters. Structured like an if-else chain, the first matching branch is the item that gets emitted.
+[dependencies.cfg-if]
+version = "^1.0"
+# [features]
+# rustc-dep-of-std = ['core', 'compiler_builtins']
+features = []
+
+# [`displaydoc`](https://github.com/yaahc/displaydoc) is a  derive macro for implementing the display Trait via
+# a doc comment and string interpolation
+[dependencies.displaydoc]
+version = "^0.2"
+features = []
+
+# [`getset`](https://github.com/jbaublitz/getset) is a procedural macro for generating the most basic getters
+# and setterson fields
+[dependencies.getset]
+version = "^0.1"
+features = []
+
+# [`proc-macro2`](https://github.com/dtolnay/proc-macro2) A substitute implementation of the compiler’s proc_macro
+# API to decouple token-based libraries from the procedural macro use case
+[dependencies.proc-macro2]
+version = "^1.0"
+features = []
+
+# [`synstructure`](https://github.com/mystor/synstructure) provides helper types for matching against enum variants,
+# and extracting bindings to each of the fields in the deriving Struct or Enum in a generic way.
+[dependencies.synstructure]
+version = "^0.13"
+features = []
+
+# [`ctor`](https://github.com/mmastrac/rust-ctor.git) provides Module initialization/teardown functions for Rust
+# (like __attribute__((constructor)) in C/C++) for Linux, OSX, FreeBSD, NetBSD, Illumos, OpenBSD, DragonFlyBSD,
+# Android, iOS, WASM, and Windows.
+[dependencies.ctor]
+version = "^0.4"
+features = []
+
+# [`darling](https://github.com/teddriggs/darling) is a crate for proc macro authors, which enables parsing attributes
+# into structs. It is heavily inspired by serde both in its internals and in its API.
+[dependencies.darling]
+version = "^0.20"
+# [features]
+# default = ["suggestions",]
+# diagnostics = ["darling_core/diagnostics"]
+# suggestions = ["darling_core/suggestions"]
+features = []
+
+# [`duplicate`] (https://github.com/emoun/duplicate )provides macros for duplication of code with variable substitution
+[dependencies.duplicate]
+version = "^2"
+features = []
+
+# [`quote`](https://github.com/dtolnay/quote) provides the quote! macro for turning Rust syntax tree data structures
+# into tokens of source code.
+[dependencies.quote]
+version = "^1.0"
+features = []
+
+# [`Strum`](https://github.com/peternator7/strum) is a set of macros and traits for working with enums and strings
+# easier in Rust.
+[dependencies.strum]
+version = "^0.27"
+features = ["derive"]
+
+# [`syn`](https://github.com/dtolnay/syn) Syn is a parsing library for parsing a stream of Rust tokens into a syntax
+# tree of Rust source code.
+[dependencies.syn]
+version = "^2.0"
+features = []
 
 [lints]
 workspace = true

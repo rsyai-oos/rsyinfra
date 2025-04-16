@@ -1,0 +1,46 @@
+[package]
+name = "rsyfont"
+authors.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+readme.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
+
+[dependencies]
+# [`swash`](https://github.com/dfrg/swash.git) provides Font introspection, complex text shaping and glyph rendering.
+[dependencies.swash]
+version = "^0.2"
+
+# [glyph_brush](https://github.com/alexheretic/glyph-brush.git) is Text layout for ab_glyph
+[dependencies.glyph_brush]
+version = "^0.7"
+
+# [`ab_glyph`](https://github.com/alexheretic/ab-glyph) provides Fast API for loading, scaling, positioning and
+# rasterizing OpenType font glyphs.
+[dependencies.ab_glyph]
+version = "^0.2"
+
+# [`rustybuzz`](https://github.com/harfbuzz/rustybuzz) is a complete harfbuzz's shaping algorithm port to Rust.
+# Matches harfbuzz v10.0.1, commit c7ef6a2e (one commit after v10.0.1)
+[dependencies.rustybuzz]
+version = "^0.20"
+
+# [`owned_ttf_parser`](https://github.com/alexheretic/owned-ttf-parser) is a ttf-parser plus support for owned data.
+# Provides OwnedFace, AsFaceRef and re-exports ttf_parser::*.
+[dependencies.owned_ttf_parser]
+version = "^0"
+
+# [`ttf-parser`](https://github.com/harfbuzz/ttf-parser) high-level, safe, zero-allocation font parser for TrueType,
+# OpenType, and AAT. Can be used as a Rust or C library.
+# [dependencies.ttf-parser]
+# version = "^0"
+
+# [`fontdb`](https://github.com/razrfalcon/fontdb) is a simple, in-memory font database with CSS-like queries.
+[dependencies.fontdb]
+version = "^0"
+
+[lints]
+workspace = true

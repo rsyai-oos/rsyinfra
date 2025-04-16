@@ -10,8 +10,9 @@ rust-version.workspace = true
 version.workspace = true
 
 [dependencies]
-eframe = "^0.31"
-egui = "^0.31"
+[dependencies.egui]
+version = "^0.31"
+features = []
 
 # [`hello_egui`](https://github.com/lucasmerlin/hello_egui.git) crates
 # [begin hello_egui]
@@ -37,6 +38,15 @@ egui_tiles = "^0.12"
 egui_plot = "^0.32"
 
 egui-data-table = "^0.6"
+
+
+# canonicalize paths
+dunce = "1.0.5"
+# fetch disks
+sysinfo = { version = "0.33", default-features = false, features = ["disk"] }
+
+[dev-dependencies]
+eframe = { version = "^0.31", features = ["x11", "wgpu"] }
 
 [lints]
 workspace = true

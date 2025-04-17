@@ -1,13 +1,16 @@
 [package]
 name = "rsyos"
 authors.workspace = true
+description = "A operating system written in Rust"
 edition.workspace = true
 homepage.workspace = true
 license.workspace = true
-readme.workspace = true
 repository.workspace = true
 rust-version.workspace = true
 version.workspace = true
+readme = "README.md"
+categories = ["operating-systems"]
+keywords = ["os", "operating-systems"]
 
 [dependencies]
 hex = "0.4.3"

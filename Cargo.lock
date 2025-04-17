@@ -4514,6 +4514,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "rsydsp"
+version = "0.1.0"
+
+[[package]]
 name = "rsyegui"
 version = "0.1.0"
 dependencies = [

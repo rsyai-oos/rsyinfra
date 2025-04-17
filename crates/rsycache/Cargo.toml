@@ -38,11 +38,14 @@ lru = "^0.13"
 
 # [`Moka`](https://github.com/moka-rs/moka) is a fast, concurrent cache library for Rust.
 # Moka is inspired by the [`Caffeine`](https://github.com/ben-manes/caffeine) library for Java.
-moka = "^0.12"
+[dependencies.moka]
+version = "^0.12"
+features = ["sync"]
 
 # [`quick_cache`](https://github.com/arthurprs/quick-cache) Lightweight and high performance
 # concurrent cache optimized for low cache overhead.
-quick_cache = "^0.6"
+[dependencies.quick_cache]
+version = "^0.6"
 
 [lints]
 workspace = true

@@ -1,5 +1,5 @@
 [workspace]
-members = ["crates/*"]
+members = ["crates/*", "crates/rsycache/examples/thumbcache"]
 resolver = "2"
 
 [workspace.metadata.docs.rs]

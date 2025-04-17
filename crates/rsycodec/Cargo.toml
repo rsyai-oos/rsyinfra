@@ -1,0 +1,27 @@
+[package]
+name = "rsycodec"
+authors.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+readme.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
+
+[features]
+default = ["hex_std"]
+# hex features
+hex_std = ["hex/std"]
+hex_alloc = ["hex/alloc"]
+hex_all = ["hex_std", "hex_alloc"]
+
+[dependencies]
+# [`hex`](https://github.com/kokakiwi/rust-hex) supports Encoding and decoding data into/from hexadecimal representation.
+# [no-std] support
+[dependencies.hex]
+version = "^0.4"
+default-features = false
+
+[lints]
+workspace = true

@@ -15,19 +15,22 @@ version.workspace = true
 # other data on Linux, Windows, macOS and Redox by leveraging the mechanisms defined
 #  by the XDG base/user directory specifications on Linux, the Known Folder API on
 # Windows, and the Standard Directory guidelines on macOS
-dirs = "6.0.0"
+[dependencies.dirs]
+version = "^6"
 
 # ['dirs-sys'](https://codeberg.org/dirs/dirs-sys-rs.git) is System-level helper
 # functions for the dirs and directories crates.
 # Do not use this library directly, use dirs or directories.
-dirs-sys = "0.5.0"
+[dependencies.dirs-sys]
+version = "^0.5"
 
 #['filetime'](https://github.com/alexcrichton/filetime) is a helper library for
 # inspecting and setting the various timestamps of files in Rust.
 # This library takes into account cross-platform differences in terms of where
 # the timestamps are located, what they are called, and how to convert them into
 # a platform-independent representation.
-filetime = "^0.2"
+[dependencies.filetime]
+version = "^0.2"
 
 # ['glob'](https://github.com/rust-lang/glob)Support for matching file paths against
 # Unix shell style patterns.
@@ -35,29 +38,35 @@ filetime = "^0.2"
 # match a particular pattern (similar to the libc glob function). The methods on
 # the Pattern type provide functionality for checking if individual paths match a
 # particular pattern (similar to the libc fnmatch function).
-glob = "^0.3"
+[dependencies.glob]
+version = "^0.3"
 
 # Small crate to infer file and MIME type by checking the magic number signature.
 # Adaptation of filetype Go package ported to Rust.
 # Does not require magic file database (i.e. /etc/magic).
-infer = "^0.19"
+[dependencies.infer]
+version = "^0.19"
 
 # ['mime_guess'](https://github.com/Nemo157/mime_guess) is a crate MIME/MediaType
 # guessing by file extension. Uses a static map of known file extension -> MIME
 # type mappings.
-mime_guess = "^2.0"
+[dependencies.mime_guess]
+version = "^2.0"
 
 # ['notify'](https://github.com/notify-rs/notify) is a cross-platform filesystem
 # notification library for Rust.
-notify = "^8"
+[dependencies.notify]
+version = "^8"
 
 # ['tempfile'](https://github.com/stebalien/tempfile) is a library for managing temporary
 # files and directories
-tempfile = "^3"
+[dependencies.tempfile]
+version = "^3"
 
 # ['walkdir'](https://github.com/BurntSushi/walkdir) provides an efficient and cross
 # platform implementation of recursive directory traversal.
-walkdir = "^2"
+[dependencies.walkdir]
+version = "^2"
 
 [lints]
 workspace = true

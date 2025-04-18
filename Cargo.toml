@@ -47,7 +47,6 @@ rsylog = {version = "0.1.0", path = "crates/rsylog"}
 rsyalgo = {version = "0.1.0", path = "crates/rsyalgo"}
 rsyinfra = {version = "0.1.0", path = "crates/rsyinfra"}
 rsyasync = {version = "0.1.0", path = "crates/rsyasync"}
-rsysync = {version = "0.1.0", path = "crates/rsysync"}
 rsyconc = {version = "0.1.0", path = "crates/rsyconc"}
 rsycache = {version = "0.1.0", path = "crates/rsycache"}
 rsymem = {version = "0.1.0", path = "crates/rsymem"}

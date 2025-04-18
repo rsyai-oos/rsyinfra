@@ -9,11 +9,41 @@ repository.workspace = true
 rust-version.workspace = true
 version.workspace = true
 
+[lib]
+crate-type = ["rlib"]
+
+[features]
+default = []
+
 [dependencies]
-futures = "^0.3"
-mio = "^1"
-pollster = "^0.4"
-tokio = "^1"
+[dependencies.async-channel]
+version = "^2"
+default-features = false
+optional = true
+[dependencies.async-lock]
+version = "^3"
+default-features = false
+optional = true
+
+[dependencies.futures]
+version = "^0.3"
+default-features = false
+optional = true
+
+[dependencies.mio]
+version = "^1"
+default-features = false
+optional = true
+
+[dependencies.pollster]
+version = "^0.4"
+default-features = false
+optional = true
+
+[dependencies.tokio]
+version = "^1"
+default-features = false
+optional = true
 
 [lints]
 workspace = true

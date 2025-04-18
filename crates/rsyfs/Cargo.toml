@@ -10,6 +10,7 @@ rust-version.workspace = true
 version.workspace = true
 
 [dependencies]
+jwalk = "0.8.1"
 # ['dirs-rs](https://codeberg.org/dirs/dirs-rs.git) is a  tiny low-level library that
 # provides platform-specific standard locations of directories for config, cache and
 # other data on Linux, Windows, macOS and Redox by leveraging the mechanisms defined

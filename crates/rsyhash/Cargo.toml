@@ -33,6 +33,20 @@ rustc_hash_all = ["rustc_hash_std", "rustc_hash_nightly", "rustc_hash_rand"]
 rustc_hash = ["dep:rustc-hash"]
 
 [dependencies]
+[dependencies.scc]
+version = "^2"
+default-features = false
+optional = true
+
+[dependencies.hashbrown]
+version = "^0.15"
+default-features = false
+optional = true
+
+[dependencies.dashmap]
+version = "^6"
+default-features = false
+optional = true
 
 # [`ashsh`](https://github.com/tkaitchuck/ahash) is the fastest, DOS resistant hash currently available in Rust.
 # AHash is intended exclusively for use in in-memory hashmaps.

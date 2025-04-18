@@ -65,6 +65,7 @@ rsywasm = {version = "0.1.0", path = "crates/rsywasm"}
 rsyimage = {version = "0.1.0", path = "crates/rsyimage"}
 rsyvideo = {version = "0.1.0", path = "crates/rsyvideo"}
 rsysigsys = {version = "0.1.0", path = "crates/rsysigsys"}
+rsyconcur = {version = "0.1.0", path = "crates/rsyconcur"}
 
 
 [workspace.lints.rust]

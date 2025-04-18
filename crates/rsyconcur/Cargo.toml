@@ -1,5 +1,5 @@
 [package]
-name = "rsyconc"
+name = "rsyconcur"
 authors.workspace = true
 edition.workspace = true
 homepage.workspace = true
@@ -10,9 +10,6 @@ rust-version.workspace = true
 version.workspace = true
 
 [dependencies]
-crossbeam = "^0.8"
-flume = "^0.11"
-rayon = "^1"
 
 [lints]
 workspace = true

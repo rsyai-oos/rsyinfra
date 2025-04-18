@@ -59,8 +59,12 @@ rsydb = {version = "0.1.0", path = "crates/rsydb"}
 rsyfs = {version = "0.1.0", path = "crates/rsyfs"}
 rsypat = {version = "0.1.0", path = "crates/rsypat"}
 rsyffi = {version = "0.1.0", path = "crates/rsyffi"}
-
-
+rsysys = {version = "0.1.0", path = "crates/rsysys"}
+rsyhash = {version = "0.1.0", path = "crates/rsyhash"}
+rsywasm = {version = "0.1.0", path = "crates/rsywasm"}
+rsyimage = {version = "0.1.0", path = "crates/rsyimage"}
+rsyvideo = {version = "0.1.0", path = "crates/rsyvideo"}
+rsysigsys = {version = "0.1.0", path = "crates/rsysigsys"}
 
 
 [workspace.lints.rust]

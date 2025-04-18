@@ -26,6 +26,7 @@ crate-type = ["rlib", "cdylib"]
 
 [dependencies]
 rsysync = { workspace = true }
+rsyhash = { workspace = true, features = ["rustc_hash_std"], optinal = true}
 
 # [`cached`](https://github.com/jaemk/cached) provides implementations of several caching structures
 # as well as a handy macros for defining memoized functions.

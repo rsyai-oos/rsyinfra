@@ -9,11 +9,24 @@ repository.workspace = true
 rust-version.workspace = true
 version.workspace = true
 
+[features]
+default = ["toml", "async"]
+toml = ["config/toml"]
+yaml = ["config/yaml"]
+json = ["config/json"]
+ini = ["config/ini"]
+json5 = ["config/json5"]
+convert-case = ["config/convert-case"]
+preserve_order = ["config/preserve_order"]
+async = ["config/async"]
+
 [dependencies]
 
 # [`config`](https://github.com/rust-cli/config-rs) Layered configuration system for Rust
 # applications (with strong support for 12-factor applications).
-config = "^0.15"
+[dependencies.config]
+version = "^0.15"
+default-features = false
 
 # [`dotenvy`](https://github.com/allan2/dotenvy) loads environment variables from a .env file.
 # This is convenient for dev environments.

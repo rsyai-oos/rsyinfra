@@ -9,7 +9,31 @@ repository.workspace = true
 rust-version.workspace = true
 version.workspace = true
 
+[lib]
+crate-type = ["rlib", "cdylib"]
+
+[features]
+default = []
+# image crate features
+image = ["dep:image"]
+image_bmp = ["image/bmp"]
+
 [dependencies]
+
+[dependencies.fast_image_resize]
+version = "^5"
+default-features = false
+optional = true
+
+[dependencies.image]
+version = "^0.25"
+default-features = false
+optional = true
+
+[dependencies.rawloader]
+version = "^0.37"
+default-features = false
+optional = true
 
 [lints]
 workspace = true

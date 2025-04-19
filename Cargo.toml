@@ -47,11 +47,9 @@ rsylog = {version = "0.1.0", path = "crates/rsylog"}
 rsyalgo = {version = "0.1.0", path = "crates/rsyalgo"}
 rsyinfra = {version = "0.1.0", path = "crates/rsyinfra"}
 rsyasync = {version = "0.1.0", path = "crates/rsyasync"}
-rsyconc = {version = "0.1.0", path = "crates/rsyconc"}
 rsycache = {version = "0.1.0", path = "crates/rsycache"}
 rsymem = {version = "0.1.0", path = "crates/rsymem"}
 rsyserde = {version = "0.1.0", path = "crates/rsyserde"}
-rsyconf = {version = "0.1.0", path = "crates/rsyconf"}
 rsymacro = {version = "0.1.0", path = "crates/rsymacro"}
 rsygpu = {version = "0.1.0", path = "crates/rsygpu"}
 rsydb = {version = "0.1.0", path = "crates/rsydb"}
@@ -65,6 +63,7 @@ rsyimage = {version = "0.1.0", path = "crates/rsyimage"}
 rsyvideo = {version = "0.1.0", path = "crates/rsyvideo"}
 rsysigsys = {version = "0.1.0", path = "crates/rsysigsys"}
 rsyconcur = {version = "0.1.0", path = "crates/rsyconcur"}
+rsyconfig = {version = "0.1.0", path = "crates/rsyconfig"}
 
 
 [workspace.lints.rust]

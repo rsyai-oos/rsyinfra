@@ -1,5 +1,5 @@
 [package]
-name = "rsyconf"
+name = "rsyconfig"
 authors.workspace = true
 edition.workspace = true
 homepage.workspace = true
@@ -8,6 +8,7 @@ readme.workspace = true
 repository.workspace = true
 rust-version.workspace = true
 version.workspace = true
+build = "build.rs"
 
 [features]
 default = ["toml", "async"]
@@ -27,10 +28,18 @@ async = ["config/async"]
 [dependencies.config]
 version = "^0.15"
 default-features = false
+optional = true
 
 # [`dotenvy`](https://github.com/allan2/dotenvy) loads environment variables from a .env file.
 # This is convenient for dev environments.
-dotenvy = "^0.15"
+[dependencies.dotenvy]
+version = "^0.15"
+default-features = false
+optional = true
+
+[build-dependencies]
+
+[dev-dependencies]
 
 [lints]
 workspace = true
